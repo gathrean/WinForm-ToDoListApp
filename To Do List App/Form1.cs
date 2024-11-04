@@ -34,7 +34,7 @@ namespace To_Do_List_App
 
             // Fill text fields with data from table
             titleTextBox.Text = todoList.Rows[toDoListView.CurrentCell.RowIndex].ItemArray[0].ToString();
-            descriptionTextBox.Text = todoList.Rows[toDoListView.CurrentCell.RowIndex].ItemArray[0].ToString();
+            descriptionTextBox.Text = todoList.Rows[toDoListView.CurrentCell.RowIndex].ItemArray[1].ToString();
         }
 
         private void deleteButton_Click(object sender, EventArgs e)
