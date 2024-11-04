@@ -37,12 +37,14 @@
             editButton = new Button();
             saveButton = new Button();
             deleteButton = new Button();
+            toDoListView = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)toDoListView).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
             label1.Font = new Font("Arial", 25.875F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(27, 24);
+            label1.Location = new Point(25, 30);
             label1.Name = "label1";
             label1.Size = new Size(1342, 80);
             label1.TabIndex = 0;
@@ -117,12 +119,24 @@
             deleteButton.Text = "Delete";
             deleteButton.UseVisualStyleBackColor = true;
             // 
+            // toDoListView
+            // 
+            toDoListView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            toDoListView.BackgroundColor = SystemColors.Window;
+            toDoListView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            toDoListView.Location = new Point(53, 506);
+            toDoListView.Name = "toDoListView";
+            toDoListView.RowHeadersWidth = 82;
+            toDoListView.Size = new Size(1273, 414);
+            toDoListView.TabIndex = 10;
+            // 
             // ToDoList
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.MenuBar;
             ClientSize = new Size(1398, 972);
+            Controls.Add(toDoListView);
             Controls.Add(saveButton);
             Controls.Add(deleteButton);
             Controls.Add(editButton);
@@ -134,6 +148,7 @@
             Controls.Add(label1);
             Name = "ToDoList";
             Text = "To Do List";
+            ((System.ComponentModel.ISupportInitialize)toDoListView).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -149,5 +164,6 @@
         private Button editButton;
         private Button saveButton;
         private Button deleteButton;
+        private DataGridView toDoListView;
     }
 }
