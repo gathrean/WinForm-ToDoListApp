@@ -109,6 +109,7 @@
             saveButton.TabIndex = 9;
             saveButton.Text = "Save";
             saveButton.UseVisualStyleBackColor = true;
+            saveButton.Click += saveButton_Click;
             // 
             // deleteButton
             // 
@@ -118,6 +119,7 @@
             deleteButton.TabIndex = 8;
             deleteButton.Text = "Delete";
             deleteButton.UseVisualStyleBackColor = true;
+            deleteButton.Click += deleteButton_Click;
             // 
             // toDoListView
             // 

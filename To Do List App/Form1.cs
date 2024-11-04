@@ -36,5 +36,35 @@ namespace To_Do_List_App
             titleTextBox.Text = todoList.Rows[toDoListView.CurrentCell.RowIndex].ItemArray[0].ToString();
             descriptionTextBox.Text = todoList.Rows[toDoListView.CurrentCell.RowIndex].ItemArray[0].ToString();
         }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                todoList.Rows[toDoListView.CurrentCell.RowIndex].Delete();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex);
+            }
+        }
+
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+            if(isEditing)
+            {
+                todoList.Rows[toDoListView.CurrentCell.RowIndex]["Title"] = titleTextBox.Text;
+                todoList.Rows[toDoListView.CurrentCell.RowIndex]["Description"] = descriptionTextBox.Text;
+            }
+            else
+            {
+                todoList.Rows.Add(titleTextBox.Text, descriptionTextBox.Text);
+            }
+
+            // Clear out all the fields after saving
+            titleTextBox.Text = "";
+            descriptionTextBox.Text = "";
+            isEditing = false;
+        }
     }
 }
