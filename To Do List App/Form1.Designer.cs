@@ -50,7 +50,6 @@
             label1.TabIndex = 0;
             label1.Text = "C# To Do List";
             label1.TextAlign = ContentAlignment.TopCenter;
-            label1.Click += label1_Click;
             // 
             // titleTextBox
             // 
@@ -58,7 +57,6 @@
             titleTextBox.Name = "titleTextBox";
             titleTextBox.Size = new Size(1280, 39);
             titleTextBox.TabIndex = 2;
-            titleTextBox.TextChanged += textBox2_TextChanged;
             // 
             // descriptionTextBox
             // 
@@ -91,6 +89,7 @@
             newButton.TabIndex = 6;
             newButton.Text = "New";
             newButton.UseVisualStyleBackColor = true;
+            newButton.Click += newButton_Click;
             // 
             // editButton
             // 
@@ -100,6 +99,7 @@
             editButton.TabIndex = 7;
             editButton.Text = "Edit";
             editButton.UseVisualStyleBackColor = true;
+            editButton.Click += editButton_Click;
             // 
             // saveButton
             // 
@@ -148,6 +148,7 @@
             Controls.Add(label1);
             Name = "ToDoList";
             Text = "To Do List";
+            Load += ToDoList_Load;
             ((System.ComponentModel.ISupportInitialize)toDoListView).EndInit();
             ResumeLayout(false);
             PerformLayout();
